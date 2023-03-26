@@ -12,6 +12,19 @@ export const home = () => {
         content.appendChild(footer)
         main.appendChild(innerBlock)
     })()
+    const headerBoxes = (() => {
+        const home = document.createElement('div')
+        const menu = document.createElement('div')
+        const contact = document.createElement('div')
+
+        header.appendChild(home)
+        header.appendChild(menu)
+        header.appendChild(contact)
+
+        home.id = 'home'
+        menu.id = 'menu'
+        contact.id = 'contact'
+    })()
     const insideBlock = (() => {
         const block1 = document.createElement('div')
         const block2 = document.createElement('div')

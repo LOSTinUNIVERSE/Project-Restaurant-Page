@@ -9,6 +9,19 @@
 header {
   background-color: rgb(30, 58, 49);
   grid-area: 1/1/2/-1;
+  display: grid;
+  gap: 20px;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-content: end;
+}
+header > div {
+  background-color: cornflowerblue;
+  border: 2px black;
+  display: grid;
+  /* justify-self: start; */
+  width: 10rem;
+  height: 5rem;
 }
 main {
   background-color: rgb(104, 52, 52);
@@ -29,8 +42,6 @@ footer {
   display: grid;
   grid-template-rows: 1fr 2fr 2fr 1fr;
   gap: 20px;
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 #block1 {
   display: grid;
