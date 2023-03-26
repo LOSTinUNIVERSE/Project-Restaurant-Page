@@ -1,0 +1,30 @@
+#content {
+  background-color: rgb(69, 135, 157);
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 5fr 1fr;
+}
+header {
+  background-color: rgb(30, 58, 49);
+  grid-area: 1/1/2/-1;
+}
+main {
+  background-color: rgb(104, 52, 52);
+  grid-area: 2/1/-2/-1;
+  display: grid;
+  /* justify-content: center; */
+  justify-items: center;
+  align-items: center;
+}
+footer {
+  grid-area: -2/1/-1/-1;
+  background-color: rgb(201, 34, 34);
+}
+#innerBlock {
+  background-color: rgb(10, 11, 11);
+  width: 70%;
+  height: 80%;
+  position: relative;
+}
