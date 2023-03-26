@@ -26,5 +26,36 @@ footer {
   background-color: rgb(10, 11, 11);
   width: 70%;
   height: 80%;
-  position: relative;
+  display: grid;
+  grid-template-rows: 1fr 2fr 2fr 1fr;
+  gap: 20px;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+#block1 {
+  display: grid;
+  /* justify-self: center; */
+  background-color: lawngreen;
+  width: 1fr;
+  height: 1fr;
+  /* height: 100%; */
+}
+#block2 {
+  background-color: brown;
+  width: 1fr;
+}
+#block3 {
+  background-color: cadetblue;
+  width: 1fr;
+}
+#block4 {
+  background-color: darkcyan;
+  width: 1fr;
+}
+#innerBlock > div {
+  display: grid;
+  justify-self: center;
+  align-self: center;
+  width: 50%;
+  height: 40%;
 }
