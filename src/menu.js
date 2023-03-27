@@ -9,4 +9,7 @@ export const menu = () => {
             menuBlock.style.display = "none"
         }
     })()
+    const textStyle = () => {
+
+    }
 }

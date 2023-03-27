@@ -44,17 +44,30 @@ export const home = () => {
         const block3 = document.getElementById("block3")
         const block4 = document.getElementById("block4")
 
-        const pBlock1 = document.createElement("h1")
-
+        const hBlock1 = document.createElement("h1")
+        block1.appendChild(hBlock1)
+        hBlock1.textContent = "Lorem ipsum dolor sit amet"
 
         const p1Block2 = document.createElement("p")
+        p1Block2.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
         const p2Block2 = document.createElement("h3")
+        p2Block2.textContent = "Lorem ipsum dolor sit amet, "
+        block2.appendChild(p1Block2)
+        block2.appendChild(p2Block2)
 
         const p1Block3 = document.createElement("h1")
+        p1Block3.textContent = "Lorem ipsum dolor sit amet,"
         const p2Block3 = document.createElement("p")
+        p2Block3.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        block3.appendChild(p1Block3)
+        block3.appendChild(p2Block3)
 
         const p1Block4 = document.createElement("h1")
+        p1Block4.textContent = "Lorem ipsum dolor "
         const p2Block4 = document.createElement("p")
-
+        p2Block4.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+        block4.appendChild(p1Block4)
+        block4.appendChild(p2Block4)
     }
+    textStyle()
 }

@@ -17,9 +17,14 @@ header {
 }
 main {
   background-color: rgb(104, 52, 52);
+  background-image: url("../media/restaurant-interior.jpg");
+  /*!<a href="https://www.freepik.com/free-photo/restaurant-interior_1
+  243337.htm#query=restaurant&position=19&from_view=search&track=sph">
+  Image by evening_tao</a> on Freepik */
+  background-size: 150vh;
   grid-area: 2/1/-2/-1;
   display: grid;
-  /* justify-content: center; */
+  /* justify-content: center;  */
   justify-items: center;
   align-items: center;
 }
@@ -28,20 +33,21 @@ footer {
   background-color: rgb(201, 34, 34);
 }
 #innerBlock {
-  background-color: rgb(10, 11, 11);
   width: 70%;
   height: 100%;
   display: grid;
-  grid-template-rows: repeat(4, 100px);
-  gap: 20px;
+  grid-template-rows: 1fr 3fr 3fr 2fr;
+  gap: 10px;
 }
 #innerBlock > div {
   display: grid;
   /* background-color: azure; */
   justify-self: center;
   align-self: center;
-  width: 50%;
-  height: 40%;
+  width: 60%;
+  height: 70%;
+  border-radius: 50px;
+  justify-content: center;
 }
 button {
   width: 4rem;
@@ -54,7 +60,10 @@ button {
   background-color: rgb(179, 18, 18);
 }
 .boxes {
-  background-color: blue;
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 8px;
+  font-weight: 700;
 }
 .contactBoxes {
   background-color: yellow;
