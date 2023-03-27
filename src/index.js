@@ -1,45 +1,55 @@
 import { home } from "./home";
 import './style.css'
-// import { menu } from "./menu";
-
+import { menu } from "./menu";
+import { contact } from "./contack";
 home()
+menu()
+contact()
 
-const boxes = document.querySelectorAll('.boxes')
-let number = 1
-const disappear = function () {
-    console.log(boxes);
-    for (const item of boxes) {
-        item.style.display = "none"
-        console.log(item);
+const myModule = () => {
+    const menuBtn = document.getElementById("menu")
+    const homeBtn = document.getElementById("home")
+    const contactBtn = document.getElementById("contact")
+    const homeBoxes = document.getElementsByClassName("boxes")
+    const menuBoxes = document.getElementsByClassName("menuBox")
+    const contactBoxes = document.getElementsByClassName("contactBoxes")
+    let cleanItem = homeBoxes
+
+
+
+    function showMenuBoxes() {
+        for (const item of cleanItem) {
+            item.style.display = "grid"
+        }
     }
-}
-const appear = function () {
-    console.log(boxes);
-    for (const item of boxes) {
-        item.style.display = "grid"
-        console.log(item);
+    const cleaner = function () {
+        function remove(group) {
+            for (const item of group) {
+                item.style.display = "none"
+            }
+        }
+        if (this.id == "home") {
+            remove(menuBoxes)
+            remove(contactBoxes)
+            cleanItem = homeBoxes
+        }
+        else if (this.id == "menu") {
+            remove(homeBoxes)
+            remove(contactBoxes)
+            cleanItem = menuBoxes
+        }
+        else if (this.id == "contact") {
+            remove(homeBoxes)
+            remove(menuBoxes)
+            cleanItem = contactBoxes
+        }
+        showMenuBoxes()
     }
+    menuBtn.addEventListener("click", cleaner)
+    homeBtn.addEventListener("click", cleaner)
+    contactBtn.addEventListener("click", cleaner)
+
 }
-
-function shower() {
-    const innerBlock = document.querySelector('#innerBlock')
-    console.log(innerBlock);
-    if (number == 1) {
-        disappear()
-        number = 0
-
-    }
-    else if (number == 0) {
-        appear()
-        number = 1
-    }
-}
-
-function switcher() {
-    const home = document.querySelector("#home")
-    home.addEventListener("click", shower)
-}
-switcher()
-
+myModule()
 
 

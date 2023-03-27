@@ -22,8 +22,12 @@ export const home = () => {
         header.appendChild(contact)
 
         home.id = 'home'
+        home.textContent = "home"
         menu.id = 'menu'
+        menu.textContent = "menu"
         contact.id = 'contact'
+        contact.textContent = "contact"
+
     })()
     const insideBlock = function () {
         for (let i = 1; i < 5; i++) {
@@ -34,4 +38,23 @@ export const home = () => {
         }
     }
     insideBlock()
+    const textStyle = () => {
+        const block1 = document.getElementById("block1")
+        const block2 = document.getElementById("block2")
+        const block3 = document.getElementById("block3")
+        const block4 = document.getElementById("block4")
+
+        const pBlock1 = document.createElement("h1")
+
+
+        const p1Block2 = document.createElement("p")
+        const p2Block2 = document.createElement("h3")
+
+        const p1Block3 = document.createElement("h1")
+        const p2Block3 = document.createElement("p")
+
+        const p1Block4 = document.createElement("h1")
+        const p2Block4 = document.createElement("p")
+
+    }
 }

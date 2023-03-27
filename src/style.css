@@ -4,7 +4,7 @@
   width: 100vw;
   height: 100vh;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-rows: 10vh 1fr 10vh;
 }
 header {
   background-color: rgb(30, 58, 49);
@@ -30,14 +30,14 @@ footer {
 #innerBlock {
   background-color: rgb(10, 11, 11);
   width: 70%;
-  height: 80%;
+  height: 100%;
   display: grid;
-  grid-template-rows: 1fr 2fr 2fr 1fr;
+  grid-template-rows: repeat(4, 100px);
   gap: 20px;
 }
 #innerBlock > div {
   display: grid;
-  background-color: azure;
+  /* background-color: azure; */
   justify-self: center;
   align-self: center;
   width: 50%;
@@ -50,11 +50,12 @@ button {
 #home {
   background-color: blue;
 }
-/* .disappear > div { */
-/* display: none; */
-/* background-color: blanchedalmond; */
-/* } */
-/* .appear > div { */
-/* display: grid; */
-/* background-color: aqua; */
-/* } */
+.menuBox {
+  background-color: rgb(179, 18, 18);
+}
+.boxes {
+  background-color: blue;
+}
+.contactBoxes {
+  background-color: yellow;
+}
