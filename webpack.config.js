@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 const path = require('path');
 
 module.exports = {
@@ -8,6 +7,7 @@ module.exports = {
         filename: 'main.js',
         path: path.resolve(__dirname, 'dist'),
     },
+    devtool: 'inline-source-map',
     module: {
         rules: [
             {
@@ -16,4 +16,5 @@ module.exports = {
             },
         ],
     },
+
 };

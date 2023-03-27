@@ -13,9 +13,9 @@ export const home = () => {
         main.appendChild(innerBlock)
     })()
     const headerBoxes = (() => {
-        const home = document.createElement('div')
-        const menu = document.createElement('div')
-        const contact = document.createElement('div')
+        const home = document.createElement('button')
+        const menu = document.createElement('button')
+        const contact = document.createElement('button')
 
         header.appendChild(home)
         header.appendChild(menu)
@@ -25,20 +25,13 @@ export const home = () => {
         menu.id = 'menu'
         contact.id = 'contact'
     })()
-    const insideBlock = (() => {
-        const block1 = document.createElement('div')
-        const block2 = document.createElement('div')
-        const block3 = document.createElement('div')
-        const block4 = document.createElement('div')
-
-        innerBlock.appendChild(block1)
-        innerBlock.appendChild(block2)
-        innerBlock.appendChild(block3)
-        innerBlock.appendChild(block4)
-
-        block1.id = 'block1'
-        block2.id = 'block2'
-        block3.id = 'block3'
-        block4.id = 'block4'
-    })()
+    const insideBlock = function () {
+        for (let i = 1; i < 5; i++) {
+            const block = document.createElement('div')
+            innerBlock.appendChild(block)
+            block.id = `block${i}`
+            block.classList = "boxes"
+        }
+    }
+    insideBlock()
 }

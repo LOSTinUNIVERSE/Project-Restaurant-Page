@@ -15,14 +15,6 @@ header {
   justify-content: center;
   align-content: end;
 }
-header > div {
-  background-color: cornflowerblue;
-  border: 2px black;
-  display: grid;
-  /* justify-self: start; */
-  width: 10rem;
-  height: 5rem;
-}
 main {
   background-color: rgb(104, 52, 52);
   grid-area: 2/1/-2/-1;
@@ -43,30 +35,26 @@ footer {
   grid-template-rows: 1fr 2fr 2fr 1fr;
   gap: 20px;
 }
-#block1 {
-  display: grid;
-  /* justify-self: center; */
-  background-color: lawngreen;
-  width: 1fr;
-  height: 1fr;
-  /* height: 100%; */
-}
-#block2 {
-  background-color: brown;
-  width: 1fr;
-}
-#block3 {
-  background-color: cadetblue;
-  width: 1fr;
-}
-#block4 {
-  background-color: darkcyan;
-  width: 1fr;
-}
 #innerBlock > div {
   display: grid;
+  background-color: azure;
   justify-self: center;
   align-self: center;
   width: 50%;
   height: 40%;
 }
+button {
+  width: 4rem;
+  height: 2rem;
+}
+#home {
+  background-color: blue;
+}
+/* .disappear > div { */
+/* display: none; */
+/* background-color: blanchedalmond; */
+/* } */
+/* .appear > div { */
+/* display: grid; */
+/* background-color: aqua; */
+/* } */
