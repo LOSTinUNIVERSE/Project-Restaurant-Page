@@ -27,6 +27,7 @@ export const home = () => {
         menu.textContent = "menu"
         contact.id = 'contact'
         contact.textContent = "contact"
+        main.id = "main"
 
     })()
     const insideBlock = function () {
