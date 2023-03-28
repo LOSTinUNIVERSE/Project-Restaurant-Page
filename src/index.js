@@ -15,7 +15,10 @@ const myModule = () => {
     const contactBoxes = document.getElementsByClassName("contactBoxes")
     let cleanItem = homeBoxes
 
-
+    function boxAmountSwitcher(amount) {
+        const innerBlock = document.getElementById("innerBlock")
+        innerBlock.style.gridTemplateRows = `${amount}`
+    }
 
     function showMenuBoxes() {
         for (const item of cleanItem) {
@@ -32,16 +35,19 @@ const myModule = () => {
             remove(menuBoxes)
             remove(contactBoxes)
             cleanItem = homeBoxes
+            boxAmountSwitcher("repeat(4, 1fr)")
         }
         else if (this.id == "menu") {
             remove(homeBoxes)
             remove(contactBoxes)
             cleanItem = menuBoxes
+            boxAmountSwitcher("repeat(8, 1fr)")
         }
         else if (this.id == "contact") {
             remove(homeBoxes)
             remove(menuBoxes)
             cleanItem = contactBoxes
+            boxAmountSwitcher("repeat(6, 1fr)")
         }
         showMenuBoxes()
     }
