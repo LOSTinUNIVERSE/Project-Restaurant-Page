@@ -1,2 +1,1 @@
-# template
-just a template repo
+project created using HTML, CSS, JS.
