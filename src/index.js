@@ -49,7 +49,7 @@ const myModule = () => {
             remove(homeBoxes)
             remove(menuBoxes)
             cleanItem = contactBoxes
-            boxAmountSwitcher("repeat(6, 1fr)", "170vh")
+            boxAmountSwitcher("repeat(4, 1fr)", "170vh")
         }
         showMenuBoxes()
     }

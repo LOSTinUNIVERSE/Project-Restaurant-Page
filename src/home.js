@@ -5,6 +5,11 @@ export const home = () => {
     const main = document.createElement('main')
     const footer = document.createElement('footer')
     const innerBlock = document.createElement('div')
+    const link = document.createElement("a")
+    footer.appendChild(link)
+    link.id = "link"
+    link.textContent = "Image by evening_tao on Freepik "
+    link.href = "https://www.freepik.com/free-photo/restaurant-interior_1243337.htm#query=restaurant&position=19&from_view=search&track=sph"
     const appending = (() => {
         innerBlock.id = 'innerBlock'
         content.appendChild(header)
